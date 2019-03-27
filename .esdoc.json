@@ -1,0 +1,106 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "includes": [
+    "\\.jsx?$"
+  ],
+  "plugins": [
+    {
+      "name": "esdoc-publish-html-plugin",
+      "option": {
+        "template": "./node_modules/esdoc-custom-theme/template"
+      }
+    },
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "excludes": [
+          "\\.index\\.js$"
+        ],
+        "includes": []
+      }
+    },
+    {
+      "name": "esdoc-inject-style-plugin",
+      "option": {
+        "enable": true,
+        "styles": [
+          "./custom-styles.css"
+        ]
+      }
+    },
+    {
+      "name": "esdoc-coverage-plugin",
+      "option": {
+        "enable": true,
+        "kind": [
+          "class",
+          "method",
+          "member",
+          "get",
+          "set",
+          "constructor",
+          "function",
+          "variable"
+        ]
+      }
+    },
+    {
+      "name": "esdoc-ecmascript-proposal-plugin",
+      "option": {
+        "all": true
+      }
+    },
+    {
+      "name": "esdoc-external-ecmascript-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-brand-plugin",
+      "option": {
+        "logo": "./logo.svg",
+        "title": "Тестовое React приложение",
+        "description": "Тестовое приложение на CRA",
+        "repository": "https://github.com/agolomazov",
+        "site": "http://agolomazov.com",
+        "author": "https://twitter.com/agolomazov",
+        "image": "http://my-library.org/logo.png"
+      }
+    },
+    {
+      "name": "esdoc-jsx-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-react-plugin"
+    },
+    {
+      "name": "esdoc-type-inference-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-undocumented-identifier-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-unexported-identifier-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-lint-plugin",
+      "option": {
+        "enable": true
+      }
+    }
+  ]
+}

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "qs": "^6.7.0",
+    "ramda": "^0.26.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-scripts": "2.1.8"
@@ -11,7 +13,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clear-doc": "rm -rf ./docs",
+    "gen-docs": "node_modules/.bin/esdoc -c .esdoc.json",
+    "docs": "yarn clear-doc && yarn gen-docs && http-server docs"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +26,24 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "esdoc": "^1.1.0",
+    "esdoc-brand-plugin": "^1.0.1",
+    "esdoc-coverage-plugin": "^1.1.0",
+    "esdoc-custom-theme": "^1.4.2",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-exclude-source-plugin": "^1.0.0",
+    "esdoc-external-ecmascript-plugin": "^1.0.0",
+    "esdoc-importpath-plugin": "^1.0.2",
+    "esdoc-inject-style-plugin": "^1.0.0",
+    "esdoc-jsx-plugin": "^1.0.0",
+    "esdoc-lint-plugin": "^1.0.2",
+    "esdoc-publish-html-plugin": "^1.1.2",
+    "esdoc-react-plugin": "^1.0.1",
+    "esdoc-standard-plugin": "^1.0.0",
+    "esdoc-type-inference-plugin": "^1.0.2",
+    "esdoc-undocumented-identifier-plugin": "^1.0.0",
+    "esdoc-unexported-identifier-plugin": "^1.0.0"
+  }
 }

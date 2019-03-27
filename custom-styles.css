@@ -1,0 +1,24 @@
+.main-header,
+.sidebar-right .nav-link.headline {
+  background: rgb(33, 133, 24);
+}
+
+a {
+  color: rgb(33, 133, 24);
+}
+
+.content .detail [data-ice=anchor] a {
+  color: rgb(56, 173, 46);
+}
+
+.search-box .search-input {
+  border-bottom: 1px solid #fff;
+}
+
+.search-box .search-input:focus,
+.settings-switch .switch:focus,
+.mode-switch .switch:focus {
+  --focus-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
